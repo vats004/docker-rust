@@ -2,7 +2,7 @@
 FROM ubuntu:24.04
 
 # Set the maintainer label
-LABEL maintainer="vatsalkeshav224@gmail.com"
+# LABEL maintainer="vatsalkeshav224@gmail.com"
 
 # Update the package list and install necessary dependencies
 RUN apt-get update && apt-get install -y \
@@ -33,6 +33,7 @@ RUN git config --global user.name "vats004" \
 
 # Clone the rustfmt repository from GitHub
 RUN git clone https://github.com/vats004/rustfmt.git /root/rustfmt
+RUN git clone https://github.com/vats004/my-rustfmt.git /root/my-rustfmt
 
 # Set the default command to bash
 CMD ["/bin/bash"]
